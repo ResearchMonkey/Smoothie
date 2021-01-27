@@ -54,7 +54,7 @@ gamma_max_rate                               30000.0          # Maximum rate in 
 ## Spindle module configuration
 spindle.enable                               true   # set this to false to disable the spindle module
 spindle.type                                 analog   # set the spindle type to analog, can also be used for ESC spindles controlled by a PWM
-spindle.max_rpm                              24000    # set the max spindle speed that is achieved at 100% PWM
+spindle.max_rpm                              12000    # set the max spindle speed that is achieved at 100% PWM
 spindle.pwm_pin                              2.4      # the pin which emits the PWM signal
 spindle.pwm_period                           1000     # the PWM frequency
 spindle.switch_on_pin                        2.6      # the pin which is used to enable the VFD (optional)
