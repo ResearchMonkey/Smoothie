@@ -354,3 +354,11 @@ kill_button_pin                              2.12             # Kill button pin.
 # Only needed on a smoothieboard
 # See http://smoothieware.org/currentcontrol
 currentcontrol_module_enable                 true             # Control stepper motor current via the configuration file
+
+
+switch.spindle.enable                true                     # Enable this module
+switch.spindle.startup_state         false                    # set the switch to off on start up
+switch.spindle.input_pin             1.27                     # Pin where pause button is connected
+switch.spindle.output_on_command     M3                       # Command to turn the spindle ON eg M3 S1000  
+switch.spindle.output_off_command    M5                       # Command to turn the spindle OFF
+switch.spindle.input_pin_behavior    toggle                   # This pin toggles between it's on and off states each time it is pressed and released
