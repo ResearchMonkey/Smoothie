@@ -50,14 +50,13 @@ gamma_en_pin                                 0.19             # Pin for gamma en
 gamma_current                                1.00              # Z stepper motor current
 gamma_max_rate                               30000.0          # Maximum rate in mm/min
 
-
-## Spindle module configuration analog
-spindle.enable                                true     # set this to false to disable the spindle module
-#spindle.max_rpm                              12000    # set the max spindle speed that is achieved at 100% PWM
-#spindle.pwm_pin                              1.23     # the pin which emits the PWM signal
-#spindle.pwm_period                           1000     # the PWM frequency
-#spindle.switch_on_pin                        2.7      # the pin which is used to enable the VFD (optional)
-
+## Spindle off/on toggle
+switch.spindle.enable                true                     # Enable this module
+switch.spindle.startup_state         false                    # set the switch to off on start up
+switch.spindle.input_pin             1.23                     # Pin where pause button is connected
+switch.spindle.output_on_command     M3                       # Command to turn the spindle ON eg M3 S1000  
+switch.spindle.output_off_command    M5                       # Command to turn the spindle OFF
+switch.spindle.input_pin_behavior    toggle                   # This pin toggles between it's on and off states each time it is pressed and released
 
 ## Extruder module configuration
 # See http://smoothieware.org/extruder
